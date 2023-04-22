@@ -1,12 +1,12 @@
+import os
 import openai
 
-openai.api_key = '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'
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
-response = openai.Completion.create(
-    model="text-davinci-003",
-    prompt="Which is the largest city in China",
-    temperature=0,
-    max_tokens=100
+response = openai.Image.create(
+    prompt="落霞与孤鹜齐飞，秋水共长天一色",
+    n=1,
+    size="1024x1024"
 )
-
-print(response)
+image_url = response['data'][0]['url']
+print(image_url)

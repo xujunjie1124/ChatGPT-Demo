@@ -19,8 +19,8 @@ from openai.embeddings_utils import distances_from_embeddings, cosine_similarity
 HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 
 # Define root domain to crawl
-domain = "news.163.com"
-full_url = "https://news.163.com/"
+domain = "openai.com"
+full_url = "https://openai.com/"
 
 # Create a class to parse the HTML and get the hyperlinks
 class HyperlinkParser(HTMLParser):
